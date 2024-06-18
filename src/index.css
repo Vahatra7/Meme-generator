@@ -11,3 +11,32 @@ main {
   padding: 36px;
 }
 
+
+
+/* Header */
+.header {
+  /* width: 550px; */
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #672280, #A626D3);
+  /* background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%); */
+  color: white;
+}
+
+.headerImg {
+  height: 100%;
+  margin-right: 6px;
+}
+
+.headerTitle {
+  font-size: 20px;
+  margin-right: auto;
+}
+
+.headerText {
+  font-size: 12px;
+  font-weight: 500;
+}
+
