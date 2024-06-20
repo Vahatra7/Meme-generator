@@ -8,5 +8,5 @@ Tools used: [Vite](https://vitejs.dev/)
 
 ## To run:
 - Clone the repository
-- Install dependencies `npm install`
+- Install dependencies `npm install` and `npm install html2canvas`
 - Run `npm run dev`

@@ -1,4 +1,5 @@
 import React from "react";
+import html2canvas from 'html2canvas';
 // import memesData from "../memesData";
 
 
@@ -33,6 +34,24 @@ export default () => {
         }))
     }
 
+    const createdMeme = React.useRef()
+    const downloadMeme = async () => {
+        // const toDownload = document.getElementById("meme")
+        const toDownload = createdMeme.current
+        console.log(toDownload)
+        const canvas = await html2canvas(toDownload, { allowTaint: true, useCORS: true })
+        const data = canvas.toDataURL('image/png')
+        const link = document.createElement('a')
+
+        link.href = data
+        link.download = 'downloaded-image.png'
+
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+    }
+
+
     return (
         <main>
             <div className="form">
@@ -59,11 +78,12 @@ export default () => {
                 <button className="formButton" onClick={updateUrl}>Get a new meme image</button>
             </div>
 
-            <div className="meme">
+            <div className="meme" ref={createdMeme}>
                 <img className="memeImage" src={meme.randomImage} alt="random meme image" />
                 <h2 className="topText">{meme.topText}</h2>
                 <h2 className="bottomText">{meme.bottomText}</h2>
             </div>
+            <button className="download" onClick={downloadMeme}>Download</button>
         </main>
     )
 }

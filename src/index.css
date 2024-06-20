@@ -21,22 +21,21 @@ main {
   align-items: center;
   padding: 20px;
   background: linear-gradient(to right, #672280, #A626D3);
-  /* background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%); */
   color: white;
 }
 
 .headerImg {
-  height: 100%;
+  height: 200%;
   margin-right: 6px;
 }
 
 .headerTitle {
-  font-size: 20px;
+  font-size: 50px;
   margin-right: auto;
 }
 
 .headerText {
-  font-size: 12px;
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -45,27 +44,35 @@ main {
 /* Form */
 .form {
   display: grid;
-  grid-template: 40px 40px/1fr 1fr;
-  gap: 17px;
+  grid-template: 50px 50px/1fr 1fr;
+  gap: 30px;
+  width: 75%;
+  height: 75%;
+  margin-left: 12.5%;
 }
 
 .formLabel {
   margin-bottom: 5px;
   text-indent: 5px;
+  font-size: 20px;
 }
 
 .formInput {
+  font-size: 20px;
   font-family: "Karla", sans-serif;
   border-radius: 5px;
   border: 1px solid #D5D4D8;
   text-indent: 5px;
-  height: 35px;
+  height: 50px;
   width: 100%;
+
 }
 
 .formButton {
   /* cover the whole column */
   grid-column: 1/-1;
+  font-size: 30px;
+  font-weight: bold;
   font-family: "Karla", sans-serif;
   background: linear-gradient(to right, #672280, #A626D3);
   color: white;
@@ -74,12 +81,14 @@ main {
 }
 
 /* Meme */
-.memeImage {
-  width: 100%;
-}
-
 .meme {
   position: relative;
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+.memeImage {
+  width: 100%;
 }
 
 .topText,
@@ -113,4 +122,19 @@ main {
 
 .bottomText {
   bottom: 0;
+}
+
+/* Download */
+.download {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 2%;
+  width: 15%;
+  height: 5%;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #672280, #A626D3);
+  border: 1px solid #D5D4D8;
 }
